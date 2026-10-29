@@ -1,0 +1,8 @@
+{
+  "verifiedAtUtc": "2026-10-16T20:02:08.6022685Z",
+  "container": "atlas-wazuh-rulecheck",
+  "removed": true,
+  "remainingMatchingContainers": [],
+  "imageRetained": true,
+  "otherResourcesChanged": false
+}

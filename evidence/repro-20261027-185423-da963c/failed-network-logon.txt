@@ -1,0 +1,32 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win": {"system": {"providerName": "Microsoft-Windows-Security-Auditing", "channel": "Security", "eventID": "4625", "severityValue": "AUDIT_FAILURE", "computer": "atlas-client.example.invalid"}, "eventdata": {"logonType": "3", "targetUserName": "lab-user", "ipAddress": "192.0.2.10", "status": "0xc000006d", "subStatus": "0xc000006a"}}}
+'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.ipAddress: '192.0.2.10'
+	win.eventdata.logonType: '3'
+	win.eventdata.status: '0xc000006d'
+	win.eventdata.subStatus: '0xc000006a'
+	win.eventdata.targetUserName: 'lab-user'
+	win.system.channel: 'Security'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '4625'
+	win.system.providerName: 'Microsoft-Windows-Security-Auditing'
+	win.system.severityValue: 'AUDIT_FAILURE'
+
+**Phase 3: Completed filtering (rules).
+	id: '100100'
+	level: '5'
+	description: 'ATLAS: Failed network logon; investigate context, not proof of brute force.'
+	groups: '['atlas_windows', 'authentication_failed']'
+	firedtimes: '1'
+	mail: 'False'
+**Alert to be generated.

@@ -1,0 +1,7 @@
+{
+  "scope": "ephemeral_container_only",
+  "native_eventchannel_tested": false,
+  "source_sha256": "8dade6bd635f7b701878c6b31bc07d1b99169bdd66f106d665252309bd67843f",
+  "adapted_sha256": "222c54ae275bc82e66abed654d2dbb5865dc94bf27bc9cf5e1a2089cd683819c",
+  "change": "rule 60000: remove ossec category, use json decoder; preserve level 0"
+}

@@ -1,0 +1,2 @@
+# Preserve recorded fixture/source bytes so evidence hashes remain reproducible.
+* -text

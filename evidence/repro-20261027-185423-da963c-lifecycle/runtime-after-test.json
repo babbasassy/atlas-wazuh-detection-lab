@@ -1,0 +1,31 @@
+{
+  "at_utc": "2026-10-27T18:54:39.267641+00:00",
+  "image": "wazuh/wazuh-manager:4.14.9@sha256:3561b33f8d1edf3d3b05e1819fa9a47fd28d6536787793d1840bfdf1172359ff",
+  "state": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 597,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-27T18:54:24.115645078Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "network": "none",
+  "ports": {},
+  "mounts": [],
+  "memory_bytes": 1073741824,
+  "nano_cpus": 1000000000,
+  "memory_swap_bytes": 1073741824,
+  "pids_limit": 256,
+  "security_options": [
+    "no-new-privileges"
+  ],
+  "restart_policy": {
+    "Name": "no",
+    "MaximumRetryCount": 0
+  }
+}

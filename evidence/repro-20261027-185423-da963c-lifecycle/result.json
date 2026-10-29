@@ -1,0 +1,21 @@
+{
+  "started_at_utc": "2026-10-27T18:54:23.144961+00:00",
+  "run_id": "repro-20261027-185423-da963c",
+  "image": "wazuh/wazuh-manager:4.14.9@sha256:3561b33f8d1edf3d3b05e1819fa9a47fd28d6536787793d1840bfdf1172359ff",
+  "test_result": "passed",
+  "native_windows_collection": false,
+  "source_sha256": {
+    "scripts/build-fixtures.py": "d804e6b5364b29b238678003975e1a7b041d31d87a4eee374421f5bf9e6c5fcd",
+    "scripts/initialize-container.sh": "17ff5dc3dd6c366da6775d061cff316c90824ea8671f3f7fa059f4c9f4347b7c",
+    "scripts/logtest-json-adapter.py": "4efd2c1ea6742cf54ba60b598d49d3ac7a7b3f496bc7fcb3c22c559580e6d375",
+    "scripts/run-isolated-lab.py": "ed92d37338f3611a02e7e81b7169600afa878dbaa4b8b6cef7f5303f4b1ca2ea",
+    "scripts/run-rule-tests.py": "f35a60126743795d8550d61c563f38056e7a841f9247f3d83b3e16b46f06a818"
+  },
+  "docker_memory_bytes": 7926870016,
+  "host_available_bytes": 3794681856,
+  "test_summary": "../repro-20261027-185423-da963c/summary.json",
+  "restored_base_sha256": "8dade6bd635f7b701878c6b31bc07d1b99169bdd66f106d665252309bd67843f",
+  "base_restore_verified": true,
+  "cleanup": "own_container_removed",
+  "finished_at_utc": "2026-10-27T18:54:50.398619+00:00"
+}

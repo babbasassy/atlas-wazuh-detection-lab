@@ -1,0 +1,37 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win": {"system": {"providerName": "Microsoft-Windows-Sysmon", "channel": "Microsoft-Windows-Sysmon/Operational", "eventID": "1", "severityValue": "INFORMATION", "computer": "atlas-client.example.invalid"}, "eventdata": {"image": "C:\\Windows\\explorer.exe", "targetFilename": "C:\\Users\\Lab\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\atlas-demo.lnk"}}}
+'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.image: 'C:\Windows\explorer.exe'
+	win.eventdata.targetFilename: 'C:\Users\Lab\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\atlas-demo.lnk'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '1'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+	win.system.severityValue: 'INFORMATION'
+
+**Phase 3: Completed filtering (rules).
+	id: '61640'
+	level: '12'
+	description: 'Sysmon - Suspicious Process - explorer.exe'
+	groups: '['windows', 'sysmon', 'sysmon_process-anomalies']'
+	firedtimes: '1'
+	gdpr: '['IV_35.7.d']'
+	hipaa: '['164.312.b']'
+	mail: 'True'
+	mitre.id: '['T1055']'
+	mitre.tactic: '['Defense Evasion', 'Privilege Escalation']'
+	mitre.technique: '['Process Injection']'
+	nist_800_53: '['AU.6', 'SI.4']'
+	pci_dss: '['10.6.1', '11.4']'
+	tsc: '['CC7.2', 'CC7.3', 'CC6.1', 'CC6.8']'
+**Alert to be generated.

@@ -1,0 +1,28 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.commandLine: 'powershell.exe -EncodedCommand VwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAEEAVABMAEEAUwAnAA=='
+	win.eventdata.image: 'C:\Tools\notpowershell.exe'
+	win.eventdata.parentImage: 'C:\Windows\System32\cmd.exe'
+	win.eventdata.user: 'ATLAS\lab-user'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '1'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+	win.system.severityValue: 'INFORMATION'
+
+**Phase 3: Completed filtering (rules).
+	id: '61603'
+	level: '0'
+	description: 'Sysmon - Event 1: Process creation '
+	groups: '['windows', 'sysmon', 'sysmon_event1']'
+	firedtimes: '1'
+	mail: 'False'

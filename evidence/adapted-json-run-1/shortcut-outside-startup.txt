@@ -1,0 +1,26 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.image: 'C:\Windows\explorer.exe'
+	win.eventdata.targetFilename: 'C:\Users\Lab\Desktop\atlas-demo.lnk'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '11'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+	win.system.severityValue: 'INFORMATION'
+
+**Phase 3: Completed filtering (rules).
+	id: '61613'
+	level: '0'
+	description: 'Sysmon - Event 11: FileCreate by C:\Windows\explorer.exe'
+	groups: '['windows', 'sysmon', 'sysmon_event_11']'
+	firedtimes: '1'
+	mail: 'False'

@@ -1,0 +1,40 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win": {"system": {"providerName": "Microsoft-Windows-Security-Auditing", "channel": "Security", "eventID": "4624", "severityValue": "AUDIT_SUCCESS", "computer": "atlas-client.example.invalid"}, "eventdata": {"logonType": "3", "targetUserName": "lab-user", "ipAddress": "192.0.2.10", "status": "0xc000006d", "subStatus": "0xc000006a"}}}
+'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.ipAddress: '192.0.2.10'
+	win.eventdata.logonType: '3'
+	win.eventdata.status: '0xc000006d'
+	win.eventdata.subStatus: '0xc000006a'
+	win.eventdata.targetUserName: 'lab-user'
+	win.system.channel: 'Security'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '4624'
+	win.system.providerName: 'Microsoft-Windows-Security-Auditing'
+	win.system.severityValue: 'AUDIT_SUCCESS'
+
+**Phase 3: Completed filtering (rules).
+	id: '92651'
+	level: '0'
+	description: 'Successful Remote Logon by user:\lab-user from 192.0.2.10.'
+	groups: '['win_evt_channel', 'windows', 'authentication_success']'
+	firedtimes: '1'
+	gdpr: '['IV_32.2']'
+	gpg13: '['7.1', '7.2']'
+	hipaa: '['164.312.b']'
+	mail: 'False'
+	mitre.id: '['T1078']'
+	mitre.tactic: '['Defense Evasion', 'Persistence', 'Privilege Escalation', 'Initial Access']'
+	mitre.technique: '['Valid Accounts']'
+	nist_800_53: '['AC.7', 'AU.14']'
+	pci_dss: '['10.2.5']'
+	tsc: '['CC6.8', 'CC7.2', 'CC7.3']'

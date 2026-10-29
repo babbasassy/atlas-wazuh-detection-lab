@@ -1,0 +1,325 @@
+[
+  {
+    "case": "failed-network-logon",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": "100100",
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Security-Auditing",
+          "channel": "Security",
+          "eventID": "4625",
+          "severityValue": "AUDIT_FAILURE",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "logonType": "3",
+          "targetUserName": "lab-user",
+          "ipAddress": "192.0.2.10",
+          "status": "0xc000006d",
+          "subStatus": "0xc000006a"
+        }
+      }
+    }
+  },
+  {
+    "case": "successful-logon",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Security-Auditing",
+          "channel": "Security",
+          "eventID": "4624",
+          "severityValue": "AUDIT_SUCCESS",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "logonType": "3",
+          "targetUserName": "lab-user",
+          "ipAddress": "192.0.2.10",
+          "status": "0xc000006d",
+          "subStatus": "0xc000006a"
+        }
+      }
+    }
+  },
+  {
+    "case": "interactive-logon",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Security-Auditing",
+          "channel": "Security",
+          "eventID": "4625",
+          "severityValue": "AUDIT_FAILURE",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "logonType": "2",
+          "targetUserName": "lab-user",
+          "ipAddress": "192.0.2.10",
+          "status": "0xc000006d",
+          "subStatus": "0xc000006a"
+        }
+      }
+    }
+  },
+  {
+    "case": "missing-logon-type",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Security-Auditing",
+          "channel": "Security",
+          "eventID": "4625",
+          "severityValue": "AUDIT_FAILURE",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "targetUserName": "lab-user",
+          "ipAddress": "192.0.2.10",
+          "status": "0xc000006d",
+          "subStatus": "0xc000006a"
+        }
+      }
+    }
+  },
+  {
+    "case": "wrong-provider",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Fictional-Provider",
+          "channel": "Security",
+          "eventID": "4625",
+          "severityValue": "AUDIT_FAILURE",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "logonType": "3",
+          "targetUserName": "lab-user",
+          "ipAddress": "192.0.2.10",
+          "status": "0xc000006d",
+          "subStatus": "0xc000006a"
+        }
+      }
+    }
+  },
+  {
+    "case": "encoded-powershell",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": "100110",
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "commandLine": "powershell.exe -EncodedCommand VwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAEEAVABMAEEAUwAnAA==",
+          "parentImage": "C:\\Windows\\System32\\cmd.exe",
+          "user": "ATLAS\\lab-user"
+        }
+      }
+    }
+  },
+  {
+    "case": "mixed-case-encoded-argument",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": "100110",
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "commandLine": "powershell.exe -EnC VwByAGkAdABlAA==",
+          "parentImage": "C:\\Windows\\System32\\cmd.exe",
+          "user": "ATLAS\\lab-user"
+        }
+      }
+    }
+  },
+  {
+    "case": "ordinary-powershell",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "commandLine": "powershell.exe -Command Write-Output ATLAS",
+          "parentImage": "C:\\Windows\\System32\\cmd.exe",
+          "user": "ATLAS\\lab-user"
+        }
+      }
+    }
+  },
+  {
+    "case": "similar-process-name",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Tools\\notpowershell.exe",
+          "commandLine": "powershell.exe -EncodedCommand VwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAEEAVABMAEEAUwAnAA==",
+          "parentImage": "C:\\Windows\\System32\\cmd.exe",
+          "user": "ATLAS\\lab-user"
+        }
+      }
+    }
+  },
+  {
+    "case": "missing-command-line",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "parentImage": "C:\\Windows\\System32\\cmd.exe",
+          "user": "ATLAS\\lab-user"
+        }
+      }
+    }
+  },
+  {
+    "case": "startup-shortcut",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": "100120",
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "11",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\explorer.exe",
+          "targetFilename": "C:\\Users\\Lab\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\atlas-demo.lnk"
+        }
+      }
+    }
+  },
+  {
+    "case": "uppercase-shortcut",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": "100120",
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "11",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\explorer.exe",
+          "targetFilename": "C:\\USERS\\LAB\\APPDATA\\ROAMING\\MICROSOFT\\WINDOWS\\START MENU\\PROGRAMS\\STARTUP\\ATLAS-DEMO.LNK"
+        }
+      }
+    }
+  },
+  {
+    "case": "shortcut-outside-startup",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "11",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\explorer.exe",
+          "targetFilename": "C:\\Users\\Lab\\Desktop\\atlas-demo.lnk"
+        }
+      }
+    }
+  },
+  {
+    "case": "text-in-startup",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "11",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\explorer.exe",
+          "targetFilename": "C:\\Users\\Lab\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\atlas-demo.txt"
+        }
+      }
+    }
+  },
+  {
+    "case": "wrong-sysmon-event",
+    "data_kind": "synthetic_fixture_not_endpoint_telemetry",
+    "expected_custom_rule": null,
+    "event": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "eventID": "1",
+          "severityValue": "INFORMATION",
+          "computer": "atlas-client.example.invalid"
+        },
+        "eventdata": {
+          "image": "C:\\Windows\\explorer.exe",
+          "targetFilename": "C:\\Users\\Lab\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\atlas-demo.lnk"
+        }
+      }
+    }
+  }
+]

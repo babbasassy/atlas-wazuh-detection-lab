@@ -1,0 +1,149 @@
+{
+  "observed_at_utc": "2026-10-27T18:54:39.111006+00:00",
+  "engine": "Wazuh 4.14.9 wazuh-logtest",
+  "input": "synthetic JSON, never endpoint telemetry",
+  "adapter": "rule 60000 input gate changed to json inside disposable container",
+  "native_windows_decoder_verified": false,
+  "live_collection_verified": false,
+  "fixtures_sha256": "234dddf665d9ee125e63b627baa01a416e3cdbd63d7fd6863c54b57209655218",
+  "custom_rules_sha256": "22af0bfa1ca97c1991fc94d2acc700028f0d8ab76488b16cb1e77fced0e77c3d",
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "case": "failed-network-logon",
+      "expected_custom_rule": "100100",
+      "observed_final_rule": "100100",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "successful-logon",
+      "expected_custom_rule": null,
+      "observed_final_rule": "92651",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "interactive-logon",
+      "expected_custom_rule": null,
+      "observed_final_rule": "60122",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "missing-logon-type",
+      "expected_custom_rule": null,
+      "observed_final_rule": "60122",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "wrong-provider",
+      "expected_custom_rule": null,
+      "observed_final_rule": "60122",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "encoded-powershell",
+      "expected_custom_rule": "100110",
+      "observed_final_rule": "100110",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "mixed-case-encoded-argument",
+      "expected_custom_rule": "100110",
+      "observed_final_rule": "100110",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "ordinary-powershell",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61603",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "similar-process-name",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61603",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "missing-command-line",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61603",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "startup-shortcut",
+      "expected_custom_rule": "100120",
+      "observed_final_rule": "100120",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "uppercase-shortcut",
+      "expected_custom_rule": "100120",
+      "observed_final_rule": "100120",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "shortcut-outside-startup",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61613",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "text-in-startup",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61613",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "wrong-sysmon-event",
+      "expected_custom_rule": null,
+      "observed_final_rule": "61640",
+      "json_decoded": true,
+      "filtered": true,
+      "process_exit_code": 0,
+      "passed": true
+    }
+  ]
+}

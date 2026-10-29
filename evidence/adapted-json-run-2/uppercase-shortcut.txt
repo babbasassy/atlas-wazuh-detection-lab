@@ -1,0 +1,29 @@
+
+
+
+STDERR:
+Starting wazuh-logtest v4.14.9
+Type one log per line
+
+**Phase 1: Completed pre-decoding.
+	full event: '{"win": {"system": {"providerName": "Microsoft-Windows-Sysmon", "channel": "Microsoft-Windows-Sysmon/Operational", "eventID": "11", "severityValue": "INFORMATION", "computer": "atlas-client.example.invalid"}, "eventdata": {"image": "C:\\Windows\\explorer.exe", "targetFilename": "C:\\USERS\\LAB\\APPDATA\\ROAMING\\MICROSOFT\\WINDOWS\\START MENU\\PROGRAMS\\STARTUP\\ATLAS-DEMO.LNK"}}}
+'
+
+**Phase 2: Completed decoding.
+	name: 'json'
+	win.eventdata.image: 'C:\Windows\explorer.exe'
+	win.eventdata.targetFilename: 'C:\USERS\LAB\APPDATA\ROAMING\MICROSOFT\WINDOWS\START MENU\PROGRAMS\STARTUP\ATLAS-DEMO.LNK'
+	win.system.channel: 'Microsoft-Windows-Sysmon/Operational'
+	win.system.computer: 'atlas-client.example.invalid'
+	win.system.eventID: '11'
+	win.system.providerName: 'Microsoft-Windows-Sysmon'
+	win.system.severityValue: 'INFORMATION'
+
+**Phase 3: Completed filtering (rules).
+	id: '100120'
+	level: '7'
+	description: 'ATLAS: Shortcut created in a Windows Startup folder; validate authorized software.'
+	groups: '['atlas_windows', 'atlas_startup_shortcut']'
+	firedtimes: '1'
+	mail: 'False'
+**Alert to be generated.
